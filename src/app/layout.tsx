@@ -17,14 +17,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider appearance={{ layout: { unsafe_disableDevelopmentModeWarnings: true, }, }}>
       <html lang="en">
         <body className={inter.className}>
-          <div className="w-full bg-white px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
-            <Navbar />
+          <div className="w-full bg-white">
+            <div className="px-5 md:px-8 lg:px-10 max-w-7xl mx-auto">
+              <Navbar />
+            </div>
           </div>
-          <div className="bg-slate-100 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
-            {children}
+          <div className="w-full bg-slate-100">
+            <div className="px-5 md:px-8 lg:px-10 max-w-7xl mx-auto">
+              {children}
+            </div>
           </div>
         </body>
       </html>

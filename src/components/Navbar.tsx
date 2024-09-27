@@ -8,14 +8,14 @@ import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react"
 
 const Navbar = () => {
   return (
-    <div className="h-24 flex items-center justify-between">
+    <div className="h-20 flex items-center justify-between">
       {/* LEFT  */}
       <div className="md:hidden lg:block">
         <Link href="/" className="text-xl text-blue-600 font-bold">GEEKYSOCIAL</Link>
       </div>
 
       {/* CENTER  */}
-      <div className="hidden md:flex text-base">
+      <div className="hidden md:flex items-center text-base gap-10">
         {/* LINKS  */}
         <div className="flex gap-6 text-gray-600">
           <Link href="/" className="flex items-center gap-2">
@@ -49,10 +49,24 @@ const Navbar = () => {
             <span>Stories</span>
           </Link>
         </div>
+
+        {/* SEARCH  */}
+        <div className="hidden lg:flex bg-slate-50 py-2 px-4 border border-slate-300 shadow items-center justify-between rounded-lg w-96">
+          <input
+            type="text" placeholder="Find Geeky Developers..."
+            className="bg-transparent outline-none"
+          />
+          <Image
+            src="/search.png"
+            alt="Seach"
+            width={16}
+            height={16}
+          />
+        </div>
       </div>
 
       {/* RIGHT  */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-5">
         <ClerkLoading>
           <div
             className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-500 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
@@ -84,7 +98,7 @@ const Navbar = () => {
             <UserButton />
           </SignedIn>
           <SignedOut>
-            <div className="cursor-pointer flex items-center gap-2 text-base">
+            <div className="cursor-pointer hidden md:hidden lg:flex items-center gap-2 text-base">
               <Image
                 src="/login.png"
                 alt="Login"
