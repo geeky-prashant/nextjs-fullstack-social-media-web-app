@@ -6,6 +6,13 @@ import MobileMenu from "./MobileMenu"
 import { ClerkLoaded, ClerkLoading } from "@clerk/nextjs"
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react"
 
+import { FiHome } from "react-icons/fi";
+import { GrGroup } from "react-icons/gr";
+import { IoSearch } from "react-icons/io5";
+import { TbHexagonPlus } from "react-icons/tb";
+import { PiChatDotsBold } from "react-icons/pi";
+import { FaRegCircleUser, FaRegBell } from "react-icons/fa6";
+
 const Navbar = () => {
   return (
     <div className="h-20 flex items-center justify-between">
@@ -19,32 +26,20 @@ const Navbar = () => {
         {/* LINKS  */}
         <div className="flex gap-6 text-gray-600">
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/home.png"
-              alt="Homepage"
-              width={16}
-              height={16}
-              className="w-5 h-5"
+            <FiHome
+              className="w-5 h-5 text-blue-600"
             />
             <span>Homepage</span>
           </Link>
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/friends.png"
-              alt="Friends"
-              width={16}
-              height={16}
-              className="w-5 h-5"
+            <GrGroup
+              className="w-5 h-5 text-blue-600"
             />
             <span>Friends</span>
           </Link>
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/stories.png"
-              alt="Stories"
-              width={16}
-              height={16}
-              className="w-5 h-5"
+            <TbHexagonPlus
+              className="w-5 h-5 text-blue-600"
             />
             <span>Stories</span>
           </Link>
@@ -56,11 +51,8 @@ const Navbar = () => {
             type="text" placeholder="Find Geeky Developers..."
             className="bg-transparent outline-none"
           />
-          <Image
-            src="/search.png"
-            alt="Seach"
-            width={16}
-            height={16}
+          <IoSearch
+            className="w-5 h-5 text-slate-400"
           />
         </div>
       </div>
@@ -75,35 +67,27 @@ const Navbar = () => {
         <ClerkLoaded>
           <SignedIn>
             <div className="cursor-pointer">
-              <Image
-                src="/people.png"
-                alt="People"
-                width={20}
-                height={20} />
+              <GrGroup
+                className="w-5 h-5 text-slate-600"
+              />
             </div>
             <div className="cursor-pointer">
-              <Image
-                src="/messages.png"
-                alt="Messages"
-                width={20}
-                height={20} />
+              <PiChatDotsBold
+                className="w-5 h-5 text-slate-600"
+              />
             </div>
             <div className="cursor-pointer">
-              <Image
-                src="/notifications.png"
-                alt="Notifications"
-                width={20}
-                height={20} />
+              <FaRegBell
+                className="w-5 h-5 text-slate-600"
+              />
             </div>
             <UserButton />
           </SignedIn>
           <SignedOut>
             <div className="cursor-pointer hidden md:hidden lg:flex items-center gap-2 text-base">
-              <Image
-                src="/login.png"
-                alt="Login"
-                width={20}
-                height={20} />
+              <FaRegCircleUser
+                className="w-5 h-5 text-slate-600"
+              />
               <Link href="/">Login/Register</Link>
             </div>
           </SignedOut>
