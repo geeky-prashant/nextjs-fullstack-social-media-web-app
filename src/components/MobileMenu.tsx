@@ -17,7 +17,7 @@ const MobileMenu = () => {
         <div className={`w-6 h-1 bg-blue-600 rounded-sm ${isOpen ? "-rotate-45" : ""} origin-left ease-in-out duration-500`} />
         {
           isOpen && (
-            <div className="absolute left-0 top-24 w-full h-[calc(100vh-80px)] bg-white flex flex-col items-center justify-center gap-8 font-medium text-xl z-10">
+            <div className="absolute left-0 top-20 w-full h-[calc(100vh-80px)] bg-white flex flex-col items-center justify-center gap-8 font-medium text-xl z-50">
               <Link href="/">Home</Link>
               <Link href="/">Friends</Link>
               <Link href="/">Groups</Link>
