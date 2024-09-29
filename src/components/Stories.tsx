@@ -4,7 +4,7 @@ import { stories } from '@/data';
 const Stories = () => {
   return (
     <div
-      className="p-4 bg-white rounded-xl shadow-dark overflow-scroll text-base scrollbar-hide"
+      className="p-4 bg-white rounded-xl shadow-custom overflow-scroll text-base scrollbar-hide"
     >
       <div className="flex gap-8 w-max">
         {
