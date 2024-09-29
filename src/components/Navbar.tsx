@@ -66,17 +66,17 @@ const Navbar = () => {
         </ClerkLoading>
         <ClerkLoaded>
           <SignedIn>
-            <div className="cursor-pointer">
+            <div className="hidden md:hidden lg:block cursor-pointer">
               <GrGroup
                 className="w-5 h-5 text-slate-600"
               />
             </div>
-            <div className="cursor-pointer">
+            <div className="hidden md:hidden lg:block cursor-pointer">
               <PiChatDotsBold
                 className="w-5 h-5 text-slate-600"
               />
             </div>
-            <div className="cursor-pointer">
+            <div className="hidden md:hidden lg:block cursor-pointer">
               <FaRegBell
                 className="w-5 h-5 text-slate-600"
               />

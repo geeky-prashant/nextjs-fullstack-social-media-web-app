@@ -5,3 +5,11 @@
 .cl-internal-ttumny[data-variant="solid"][data-color="primary"] {
   box-shadow: none !important;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
